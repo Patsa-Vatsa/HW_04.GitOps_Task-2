@@ -1,0 +1,15 @@
+name: Test Calcuator
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Run test script
+      run: python TestCalculator.py
